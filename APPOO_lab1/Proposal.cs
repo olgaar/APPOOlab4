@@ -10,12 +10,6 @@ namespace APPOO_lab1
     {
         Event myService;
 
-        Proposal(string body, string address, string signature)
-        {
-            this.body = body;
-            this.addressee = address;
-            this.signature = signature;
-        }
         public Proposal(Event myService, string signature)
         {
             this.myService = myService;

@@ -8,11 +8,11 @@ namespace APPOO_lab1
 {
    public abstract class Letter
     {
-        protected string body { get; set; }
-        protected string addressee;
-        protected string signature;
+        public string body { get; set; }
+        public string addressee;
+        public string signature;
         
-        public string BuildLetter()
+        /*public string BuildLetter()
         {
             BuildAddress();
             BuildBody();
@@ -20,11 +20,12 @@ namespace APPOO_lab1
 
             string myLetter = string.Concat(addressee, body, signature);
             return myLetter;
-        }
+        }*/
 
         public abstract void BuildBody();
         public abstract void BuildAddress();
         public abstract void BuildSignature();
+       // public abstract void buildNewLetter();
     }
    
 }

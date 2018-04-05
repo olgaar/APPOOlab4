@@ -47,6 +47,7 @@
     <Compile Include="Event.cs" />
     <Compile Include="Invitation.cs" />
     <Compile Include="Letter.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="MessageCreator.cs" />
     <Compile Include="MessageType.cs" />
     <Compile Include="Program.cs" />

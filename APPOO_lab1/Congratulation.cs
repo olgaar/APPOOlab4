@@ -10,12 +10,6 @@ namespace APPOO_lab1
     {
         Event theirsEvent;
         
-        Congratulation(string body, string address, string signature)
-        {
-            this.body = body;
-            this.addressee = address;
-            this.signature = signature;
-        }
         public Congratulation(Event theirsEvent, string signature)
         {
             this.addressee = theirsEvent.getAdressee();

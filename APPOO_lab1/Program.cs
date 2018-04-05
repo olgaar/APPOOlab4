@@ -11,17 +11,25 @@ namespace APPOO_lab1
                 
         static void Main(string[] args)
         {
-            var congratulation = new Event("День рождения", new DateTime(2018, 7, 20), "Анечка");
-            var proposal = new Event("Тестирование Программного Обеспечения", new DateTime(2018, 7, 20), "Филипп");
-            var invitation = new Event("День основания компании \" Vintix\"", new DateTime(2018, 7, 20), "Анатолий Аркадьевич");
+            var congratulationEvent = new Event("День рождения", new DateTime(2018, 7, 20), "Анечка");
+            var proposalEvent = new Event("Тестирование Программного Обеспечения", new DateTime(2018, 7, 20), "Анатолий Аркадьевич");
+            var invitationEvent = new Event("День основания компании \" Vintix\"", new DateTime(2018, 7, 20), "Филипп");
 
-            var a= MessageCreator.Create(MessageType.Congratulation, congratulation);            
-            var b = MessageCreator.Create(MessageType.Proposal, proposal);
-            var c = MessageCreator.Create(MessageType.Invitation, invitation);
+            Letter congratulation = new Congratulation(congratulationEvent, "Оля");
+            Letter invitation = new Invitation(invitationEvent, "Ольга");
+            Letter proposal = new Proposal(proposalEvent, "Ольга Архирий");
+
+            MessageCreator a = new MessageCreator();
+            var letter = a.BuildLetter(invitation);
+            Console.WriteLine(letter);
+
+            letter = a.BuildLetter(proposal);
+            Console.WriteLine(System.Environment.NewLine + letter);
+
+            letter = a.BuildLetter(congratulation);
+            Console.WriteLine(System.Environment.NewLine + letter);
                        
-            Console.WriteLine(a);
-            Console.WriteLine(System.Environment.NewLine + b);
-            Console.WriteLine(System.Environment.NewLine + c);
+           
         }
     }
 }

@@ -11,16 +11,10 @@ namespace APPOO_lab1
 
          Event myEvent;
 
-        Invitation(string body, string address, string signature)
-        {
-            this.body = body;
-            this.addressee = address;
-            this.signature = signature;
-        }
         public Invitation(Event myEvent, string signature)
         {
             this.myEvent = myEvent;
-            this.addressee = myEvent.getAdressee();
+            addressee = myEvent.getAdressee();
             this.signature = signature;
         }
         public override void BuildAddress()
